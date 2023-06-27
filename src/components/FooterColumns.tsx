@@ -11,8 +11,8 @@ const FooterColumns = ({title , links}: Props) => {
     <div className='flex flex-col gap-8'>
         <h3 className='font-semibold text-sm lg:text-base tracking-wider'>{title}</h3>
         <div className='flex flex-col text-xs lg:text-sm tracking-wider gap-4'>
-        {links.map(link => (
-            <Link href='/' >{link}</Link>
+        {links.map((link, i) => (
+            <Link href='/' key={i}>{link}</Link>
         ))}
         </div>
     </div>
